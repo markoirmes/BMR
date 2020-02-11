@@ -63,5 +63,5 @@ function calculate() {
 }
 
 function reset() {
-  window.location.href = window.location.href;
+  window.location.reload(true);
 }
