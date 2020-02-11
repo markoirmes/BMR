@@ -63,5 +63,6 @@ function calculate() {
 }
 
 function reset() {
-  document.location.reload(true);
+  window.location.reload();
+  return false;
 }
