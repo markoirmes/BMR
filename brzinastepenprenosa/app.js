@@ -4,6 +4,7 @@ function calculate() {
   const obim = poluprecnik * 2 * 3.14;
   const menjac = document.getElementById("menjac").value;
   const rezultat = document.getElementById("rezultat");
+  const odnosStepenaPrenosa = document.getElementById("odnosStepenaPrenosa");
   const dif = document.getElementById("diferencijal").value;
   let diferencijal;
   let odnos1;
@@ -57,11 +58,13 @@ function calculate() {
 
   if (menjac === "4") {
     rezultat.innerHTML = `1. brzina - ${brzina1}km/h<br/>2. brzina - ${brzina2}km/h<br/>3. brzina - ${brzina3}km/h<br/>4. brzina - ${brzina4}km/h`;
+    odnosStepenaPrenosa.innerHTML = `Odnos 1. brzine: ${odnos1}<br>Odnos 2. brzine: ${odnos2}<br>Odnos 3. brzine: ${odnos3}<br>Odnos 4. brzine: ${odnos4}<br>`;
   } else {
     rezultat.innerHTML = `1. brzina - ${brzina1}km/h<br/>2. brzina - ${brzina2}km/h<br/>3. brzina - ${brzina3}km/h<br/>4. brzina - ${brzina4}km/h<br/>5. brzina - ${brzina5}km/h<br/>`;
+    odnosStepenaPrenosa.innerHTML = `Odnos 1. brzine: ${odnos1}<br>Odnos 2. brzine: ${odnos2}<br>Odnos 3. brzine: ${odnos3}<br>Odnos 4. brzine: ${odnos4}<br>Odnos 5. brzine: ${odnos5}<br>`;
   }
 }
 
 function reset() {
-  rezultat.innerHTML = "";
+  location.reload();
 }
