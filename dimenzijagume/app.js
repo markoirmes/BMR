@@ -18,10 +18,10 @@ function calculate() {
   const precnikIznos2 = (precnik2 * 2.54 * 10 + visinaIznos2 * 2).toFixed(2);
   const obimIznos2 = (precnikIznos2 * 3.1416).toFixed(1);
 
-  const laganjeBrzine = (parseInt(obimIznos2) / parseInt(obimIznos1) + 100).toFixed(2);
-  const brzina50 = ((50 * laganjeBrzine) / 100).toFixed(2);
-  const brzina80 = ((80 * laganjeBrzine) / 100).toFixed(2);
-  const brzina130 = ((130 * laganjeBrzine) / 100).toFixed(2);
+  const laganjeBrzine = (100 - (parseInt(obimIznos1) / parseInt(obimIznos2)) * 100).toFixed(2);
+  const brzina50 = (50 + (50 * laganjeBrzine) / 100).toFixed(2);
+  const brzina80 = (80 + (80 * laganjeBrzine) / 100).toFixed(2);
+  const brzina130 = (130 + (130 * laganjeBrzine) / 100).toFixed(2);
   const klirens = (parseInt(precnikIznos2) / 2 - parseInt(precnikIznos1) / 2).toFixed(2);
   const rub = (parseInt(precnikIznos1) / 2 - parseInt(precnikIznos2) / 2).toFixed(2);
 
@@ -38,7 +38,7 @@ function calculate() {
   Visina gume: ${visinaIznos2}mm<br/>
   Precnik tocka: ${precnikIznos2}mm <br/>
   Obim: ${obimIznos2}mm <br/>
-  Greska na brzinomeru: ${(laganjeBrzine - 100).toFixed(2)}% <br/>
+  Greska na brzinomeru: ${laganjeBrzine}% <br/>
   Brzina pri 50km/h: ${brzina50}km/h<br/>
   Brzina pri 80km/h:  ${brzina80}km/h <br/>
   Brzina pri 130km/h: ${brzina130}km/h<br/>
