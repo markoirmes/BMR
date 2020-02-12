@@ -18,7 +18,7 @@ function calculate() {
   const precnikIznos2 = (precnik2 * 2.54 * 10 + visinaIznos2 * 2).toFixed(2);
   const obimIznos2 = (precnikIznos2 * 3.1416).toFixed(1);
 
-  const laganjeBrzine = ((obimIznos1 * 100) / obimIznos2).toFixed(2);
+  const laganjeBrzine = (parseInt(obimIznos2) / parseInt(obimIznos1) + 100).toFixed(2);
   const brzina50 = ((50 * laganjeBrzine) / 100).toFixed(2);
   const brzina80 = ((80 * laganjeBrzine) / 100).toFixed(2);
   const brzina130 = ((130 * laganjeBrzine) / 100).toFixed(2);
