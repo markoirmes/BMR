@@ -23,7 +23,7 @@ function calculate() {
   const brzina80 = ((80 * laganjeBrzine) / 100).toFixed(2);
   const brzina130 = ((130 * laganjeBrzine) / 100).toFixed(2);
   const klirens = ((precnikIznos2 - precnikIznos1) / 2).toFixed(2);
-  const rub = (visinaIznos2 - visinaIznos1).toFixed(2);
+  const rub = ((precnik2 / 2) * 2.54 * 10 + parseInt(visinaIznos2) - ((precnik1 / 2) * 2.54 * 10 + parseInt(visinaIznos1))).toFixed(2);
 
   rezultat1.innerHTML = `Sirina gume: ${sirinaIznos1}mm <br/>
   Visina gume: ${visinaIznos1}mm<br/>
