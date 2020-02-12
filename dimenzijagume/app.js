@@ -47,5 +47,5 @@ function calculate() {
 }
 
 function reset() {
-  location.reload();
+  location.reload(true);
 }
